@@ -2,7 +2,7 @@
 
 ## 🚀 Preview do projeto
 
-[![Preview](https://raw.githubusercontent.com/bruno-alves-lopes-dev/bruno-portfolio/main/frontend/assets/preview.png)](https://bruno-portfolio-six.vercel.app)
+[![Preview](./assets/preview.png)](https://bruno-portfolio-six.vercel.app)
 
 🔗 **Acesse o projeto online:**  
 https://bruno-portfolio-six.vercel.app
