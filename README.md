@@ -11,7 +11,7 @@ https://bruno-portfolio-six.vercel.app
 
 ## 📌 Sobre o projeto
 
-Portfólio desenvolvido com foco em demonstrar habilidades práticas em desenvolvimento web moderno, incluindo integração com Inteligência Artificial.
+Portfólio desenvolvido para demonstrar habilidades práticas em desenvolvimento web moderno, incluindo integração com Inteligência Artificial.
 
 ---
 
@@ -40,18 +40,7 @@ Portfólio desenvolvido com foco em demonstrar habilidades práticas em desenvol
 - Chat interativo com IA
 - Interface moderna e responsiva
 - Integração frontend + backend em produção
-- Estrutura fullstack organizada
 - Consumo de API em tempo real
-
----
-
-## 🧠 Diferenciais do projeto
-
-- Aplicação fullstack em produção
-- Integração com Inteligência Artificial
-- Deploy profissional (Vercel + Render)
-- Boas práticas de organização de código
-- Separação de responsabilidades (frontend/backend)
 
 ---
 
@@ -59,33 +48,41 @@ Portfólio desenvolvido com foco em demonstrar habilidades práticas em desenvol
 
 ```bash
 bruno-portfolio/
-│
-├── frontend/   # Aplicação React (Vercel)
-├── backend/    # API Node.js (Render)
-
----
-
-⚙️ Como rodar o projeto localmente
+├── frontend/   # React (Vercel)
+├── backend/    # Node.js (Render)
+```
+⚙️ Como rodar localmente
+```bash
 📥 Clone o repositório
 git clone https://github.com/bruno-alves-lopes-dev/bruno-portfolio.git
+```
+
 ▶️ Frontend
+```bash
 cd frontend
 npm install
 npm run dev
+```
 ⚙️ Backend
+```bash
 cd backend
 npm install
 npm start
+```
+
 🔐 Variáveis de ambiente
+```bash
 Frontend (.env)
 VITE_API_BASE_URL=http://localhost:3000
 Backend (.env)
 OPENAI_API_KEY=sua_chave
 # ou
 GEMINI_API_KEY=sua_chave
+```
+
 🎯 Objetivo
 
-Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos em desenvolvimento web e demonstrar a capacidade de construir aplicações completas, integrando frontend, backend e serviços externos.
+Consolidar conhecimentos em desenvolvimento web e demonstrar capacidade de construir aplicações completas com integração de serviços externos.
 
 👨‍💻 Autor
 
