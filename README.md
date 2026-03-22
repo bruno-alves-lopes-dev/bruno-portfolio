@@ -1,3 +1,7 @@
+## 🚀 Preview do projeto
+
+[![Preview](./assets/preview.png)](https://bruno-portfolio-six.vercel.app)
+
 # 💼 Bruno Alves Lopes | Portfólio Fullstack com IA
 
 Portfólio desenvolvido com foco em demonstrar habilidades práticas em desenvolvimento web moderno, incluindo integração com Inteligência Artificial.
