@@ -162,6 +162,10 @@ ${brunoProfile.goals.map((goal) => `- ${goal}`).join("\n")}`;
 }
 
 async function fetchAiResponse(message: string): Promise<string> {
+    if (!API_BASE_URL) {
+        throw new Error("VITE_API_BASE_URL não configurada");
+    }
+
     const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: "POST",
         headers: {
@@ -190,11 +194,7 @@ function AssistantAvatar() {
 function BrunoMiniAvatar() {
     return (
         <div className="relative h-10 w-10 overflow-hidden rounded-2xl border border-white/10 shadow-[0_6px_18px_rgba(0,0,0,0.28)]">
-            <img
-                src={brunoAvatar}
-                alt="Bruno Alves Lopes"
-                className="h-full w-full object-cover"
-            />
+            <img src={brunoAvatar} alt="Bruno Alves Lopes" className="h-full w-full object-cover" />
         </div>
     );
 }
@@ -207,16 +207,12 @@ function QuickActions({
     onSelect: (value: string) => void;
 }) {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-6"
-        >
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mb-6">
             <div className="mb-2 flex items-center gap-2 px-1">
                 <Sparkles size={13} className="text-cyan-300" />
                 <span className="text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">
-                    Sugestões
-                </span>
+          Sugestões
+        </span>
             </div>
 
             <div className="flex flex-wrap gap-2">
@@ -227,13 +223,13 @@ function QuickActions({
                         onClick={() => onSelect(question)}
                         className="group rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-2 text-left text-xs text-slate-200 transition duration-200 hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-white"
                     >
-                        <span className="inline-flex items-center gap-1.5">
-                            {question}
-                            <ChevronRight
-                                size={12}
-                                className="opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
-                            />
-                        </span>
+            <span className="inline-flex items-center gap-1.5">
+              {question}
+                <ChevronRight
+                    size={12}
+                    className="opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
+                />
+            </span>
                     </button>
                 ))}
             </div>
@@ -305,24 +301,24 @@ export default function ChatBot() {
                                                 Bruno • Assistente Inteligente
                                             </p>
                                             <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.18em] text-emerald-300">
-                                                online
-                                            </span>
+                        online
+                      </span>
                                         </div>
 
                                         <p className="max-w-[270px] text-xs leading-5 text-slate-400">
-                                            Portfólio interativo com IA real para falar sobre back-end,
-                                            trajetória, projetos e diferenciais profissionais.
+                                            Portfólio interativo com IA real para falar sobre back-end, trajetória,
+                                            projetos e diferenciais profissionais.
                                         </p>
 
                                         <div className="mt-3 flex flex-wrap gap-2">
-                                            <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[10px] uppercase tracking-[0.14em] text-cyan-300">
-                                                <Cpu size={11} />
-                                                Back-end
-                                            </span>
+                      <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[10px] uppercase tracking-[0.14em] text-cyan-300">
+                        <Cpu size={11} />
+                        Back-end
+                      </span>
                                             <span className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[10px] uppercase tracking-[0.14em] text-sky-300">
-                                                <Briefcase size={11} />
-                                                Trajetória
-                                            </span>
+                        <Briefcase size={11} />
+                        Trajetória
+                      </span>
                                         </div>
                                     </div>
                                 </div>
@@ -338,10 +334,7 @@ export default function ChatBot() {
                             </div>
                         </header>
 
-                        <div
-                            ref={scrollRef}
-                            className="relative flex-1 overflow-y-auto px-4 py-5 scroll-smooth"
-                        >
+                        <div ref={scrollRef} className="relative flex-1 overflow-y-auto px-4 py-5 scroll-smooth">
                             {messages.length === 1 && (
                                 <QuickActions
                                     suggestions={suggestions}
@@ -364,11 +357,7 @@ export default function ChatBot() {
                                     >
                                         {message.role === "assistant" && <AssistantAvatar />}
 
-                                        <div
-                                            className={`max-w-[82%] ${
-                                                message.role === "user" ? "order-1" : ""
-                                            }`}
-                                        >
+                                        <div className={`max-w-[82%] ${message.role === "user" ? "order-1" : ""}`}>
                                             <div
                                                 className={`relative overflow-hidden rounded-[1.5rem] px-4 py-3.5 text-[0.92rem] leading-7 ${
                                                     message.role === "user"
@@ -382,14 +371,8 @@ export default function ChatBot() {
 
                                                 <ReactMarkdown
                                                     components={{
-                                                        p: ({ children }) => (
-                                                            <p className="mb-2.5 last:mb-0">{children}</p>
-                                                        ),
-                                                        ul: ({ children }) => (
-                                                            <ul className="ml-4 list-disc space-y-1.5">
-                                                                {children}
-                                                            </ul>
-                                                        ),
+                                                        p: ({ children }) => <p className="mb-2.5 last:mb-0">{children}</p>,
+                                                        ul: ({ children }) => <ul className="ml-4 list-disc space-y-1.5">{children}</ul>,
                                                         li: ({ children }) => <li>{children}</li>,
                                                         strong: ({ children }) => (
                                                             <strong
@@ -408,9 +391,7 @@ export default function ChatBot() {
                                                                 target="_blank"
                                                                 rel="noreferrer noopener"
                                                                 className={`underline underline-offset-4 ${
-                                                                    message.role === "user"
-                                                                        ? "text-white"
-                                                                        : "text-cyan-300"
+                                                                    message.role === "user" ? "text-white" : "text-cyan-300"
                                                                 }`}
                                                             >
                                                                 {children}
@@ -443,10 +424,10 @@ export default function ChatBot() {
 
                                             <div className="rounded-[1.5rem] rounded-bl-md border border-white/10 bg-white/[0.045] px-4 py-3.5 shadow-[0_10px_30px_rgba(0,0,0,0.22)]">
                                                 <div className="flex items-center gap-1.5 opacity-80">
-                                                    <span
-                                                        className="h-2 w-2 animate-bounce rounded-full bg-cyan-300"
-                                                        style={{ animationDelay: "0ms" }}
-                                                    />
+                          <span
+                              className="h-2 w-2 animate-bounce rounded-full bg-cyan-300"
+                              style={{ animationDelay: "0ms" }}
+                          />
                                                     <span
                                                         className="h-2 w-2 animate-bounce rounded-full bg-cyan-300"
                                                         style={{ animationDelay: "120ms" }}
@@ -515,12 +496,8 @@ export default function ChatBot() {
                             </form>
 
                             <div className="mt-2 flex items-center justify-between px-1">
-                                <p className="text-[11px] text-slate-500">
-                                    IA + fallback inteligente do portfólio
-                                </p>
-                                <p className="text-[11px] text-slate-500">
-                                    {input.length}/280
-                                </p>
+                                <p className="text-[11px] text-slate-500">IA + fallback inteligente do portfólio</p>
+                                <p className="text-[11px] text-slate-500">{input.length}/280</p>
                             </div>
                         </div>
                     </motion.section>
@@ -561,14 +538,11 @@ export default function ChatBot() {
                 >
                     <div className="mb-1.5 flex items-center gap-2 text-cyan-300">
                         <Sparkles size={14} />
-                        <span className="text-xs font-semibold uppercase tracking-[0.2em]">
-                            Bruno AI
-                        </span>
+                        <span className="text-xs font-semibold uppercase tracking-[0.2em]">Bruno AI</span>
                     </div>
 
                     <p className="text-xs leading-5 text-slate-400">
-                        Pergunte sobre minha trajetória, foco em back-end, projetos ou
-                        diferenciais profissionais.
+                        Pergunte sobre minha trajetória, foco em back-end, projetos ou diferenciais profissionais.
                     </p>
                 </motion.div>
             )}
