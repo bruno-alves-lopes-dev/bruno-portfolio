@@ -1,39 +1,94 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+# 💼 Bruno Alves Lopes | Portfólio Fullstack com IA
 
-  <!-- TÍTULO -->
-  <title>Bruno Alves Lopes | Desenvolvedor Front-End & Fullstack</title>
+Portfólio desenvolvido com foco em demonstrar habilidades práticas em desenvolvimento web moderno, incluindo integração com Inteligência Artificial.
 
-  <!-- SEO -->
-  <meta
-    name="description"
-    content="Desenvolvedor front-end e fullstack em formação. Experiência com React, JavaScript, APIs e projetos com IA. Confira meu portfólio."
-  />
-  <meta name="author" content="Bruno Alves Lopes" />
+🔗 **Acesse o projeto online:**  
+https://bruno-portfolio-six.vercel.app
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/png" href="/favicon.png" />
+---
 
-  <!-- OPEN GRAPH (LinkedIn, WhatsApp, Facebook) -->
-  <meta property="og:title" content="Bruno Alves Lopes | Portfólio" />
-  <meta
-    property="og:description"
-    content="Portfólio com projetos reais, incluindo integração com IA, React e APIs. Confira meu trabalho."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bruno-portfolio-six.vercel.app" />
-  <meta property="og:image" content="https://bruno-portfolio-six.vercel.app/preview.png" />
+## 🚀 Tecnologias utilizadas
 
-  <!-- TWITTER -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bruno Alves Lopes | Portfólio" />
-  <meta
-    name="twitter:description"
-    content="Projetos com React, integração com IA e desenvolvimento web moderno."
-  />
-  <meta name="twitter:image" content="https://bruno-portfolio-six.vercel.app/preview.png" />
+### Frontend
+- React + Vite
+- TypeScript
+- Tailwind CSS
+- Framer Motion
 
-  <!-- THEME COLOR -->
-  <meta name="theme-color" content="#0f172a" />
-</head>
+### Backend
+- Node.js
+- Express
+- Integração com IA (OpenAI / Gemini)
+- Rate limit e segurança básica
+
+### Deploy
+- Frontend: Vercel
+- Backend: Render
+
+---
+
+## 🤖 Funcionalidades
+
+- Chat interativo com IA
+- Interface moderna e responsiva
+- Integração frontend + backend em produção
+- Estrutura fullstack organizada
+- Consumo de API em tempo real
+
+---
+
+## 🧠 Diferenciais do projeto
+
+- Aplicação fullstack em produção
+- Integração com inteligência artificial
+- Deploy profissional (Vercel + Render)
+- Boas práticas de organização de código
+- Separação de responsabilidades (frontend/backend)
+
+---
+
+## 📂 Estrutura do projeto
+bruno-portfolio/
+│
+├── frontend/ # Aplicação React (Vercel)
+├── backend/ # API Node.js (Render)
+
+---
+
+## ⚙️ Como rodar o projeto localmente
+
+### Clone o repositório
+Frontend - 
+cd frontend
+npm install
+npm run dev
+
+Backend -
+cd backend
+npm install
+npm start
+
+🔐 Variáveis de ambiente
+Frontend (.env) - 
+VITE_API_BASE_URL=http://localhost:3000
+
+Backend (.env) -
+OPENAI_API_KEY=sua_chave
+# ou
+GEMINI_API_KEY=sua_chave
+
+📌 Objetivo
+
+Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos em desenvolvimento web e demonstrar capacidade de construir aplicações completas, integrando frontend, backend e serviços externos.
+
+👨‍💻 Autor
+
+Bruno Alves Lopes
+
+📧 Bruno.alves.lopes.dev@gmail.com
+
+🔗 https://www.linkedin.com/in/bruno-alves-lopes-dev
+
+⭐ Considerações
+
+Se você é recrutador ou desenvolvedor e chegou até aqui, fique à vontade para explorar o projeto. Feedbacks são sempre bem-vindos!
