@@ -9,7 +9,7 @@ import express from "express";
 
     const app = express();
     const PORT = Number(process.env.PORT || 3001);
-    const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "http://127.0.0.1:8080";
+    const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "https://bruno-portfolio-six.vercel.app";
     const GEMINI_MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 
     if (!process.env.GEMINI_API_KEY) {
