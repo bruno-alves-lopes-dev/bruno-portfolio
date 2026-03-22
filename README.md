@@ -1,31 +1,35 @@
+# 💼 Bruno Alves Lopes | Portfólio Fullstack com IA
+
 ## 🚀 Preview do projeto
 
 [![Preview](./assets/preview.png)](https://bruno-portfolio-six.vercel.app)
-
-# 💼 Bruno Alves Lopes | Portfólio Fullstack com IA
-
-Portfólio desenvolvido com foco em demonstrar habilidades práticas em desenvolvimento web moderno, incluindo integração com Inteligência Artificial.
 
 🔗 **Acesse o projeto online:**  
 https://bruno-portfolio-six.vercel.app
 
 ---
 
+## 📌 Sobre o projeto
+
+Portfólio desenvolvido com foco em demonstrar habilidades práticas em desenvolvimento web moderno, incluindo integração com Inteligência Artificial.
+
+---
+
 ## 🚀 Tecnologias utilizadas
 
-### Frontend
+### 🎨 Frontend
 - React + Vite
 - TypeScript
 - Tailwind CSS
 - Framer Motion
 
-### Backend
+### ⚙️ Backend
 - Node.js
 - Express
 - Integração com IA (OpenAI / Gemini)
 - Rate limit e segurança básica
 
-### Deploy
+### 🌐 Deploy
 - Frontend: Vercel
 - Backend: Render
 
@@ -44,7 +48,7 @@ https://bruno-portfolio-six.vercel.app
 ## 🧠 Diferenciais do projeto
 
 - Aplicação fullstack em produção
-- Integração com inteligência artificial
+- Integração com Inteligência Artificial
 - Deploy profissional (Vercel + Render)
 - Boas práticas de organização de código
 - Separação de responsabilidades (frontend/backend)
@@ -52,38 +56,36 @@ https://bruno-portfolio-six.vercel.app
 ---
 
 ## 📂 Estrutura do projeto
+
+```bash
 bruno-portfolio/
 │
-├── frontend/ # Aplicação React (Vercel)
-├── backend/ # API Node.js (Render)
+├── frontend/   # Aplicação React (Vercel)
+├── backend/    # API Node.js (Render)
 
 ---
 
-## ⚙️ Como rodar o projeto localmente
-
-### Clone o repositório
-Frontend - 
+⚙️ Como rodar o projeto localmente
+📥 Clone o repositório
+git clone https://github.com/bruno-alves-lopes-dev/bruno-portfolio.git
+▶️ Frontend
 cd frontend
 npm install
 npm run dev
-
-Backend -
+⚙️ Backend
 cd backend
 npm install
 npm start
-
 🔐 Variáveis de ambiente
-Frontend (.env) - 
+Frontend (.env)
 VITE_API_BASE_URL=http://localhost:3000
-
-Backend (.env) -
+Backend (.env)
 OPENAI_API_KEY=sua_chave
 # ou
 GEMINI_API_KEY=sua_chave
+🎯 Objetivo
 
-📌 Objetivo
-
-Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos em desenvolvimento web e demonstrar capacidade de construir aplicações completas, integrando frontend, backend e serviços externos.
+Este projeto foi desenvolvido com o objetivo de consolidar conhecimentos em desenvolvimento web e demonstrar a capacidade de construir aplicações completas, integrando frontend, backend e serviços externos.
 
 👨‍💻 Autor
 
