@@ -18,6 +18,7 @@ const projects = [
     tags: ["React", "TypeScript", "Node", "IA"],
     status: "Ativo",
     accent: "from-fuchsia-400/20 via-cyan-500/10 to-transparent",
+    link: "#",
   },
   {
     icon: Code2,
